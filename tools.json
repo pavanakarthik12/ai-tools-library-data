@@ -1,0 +1,479 @@
+[
+  {
+    "name": "Bolt DIY",
+    "url": "https://bolt.diy/",
+    "category": "AI App Builders",
+    "tags": ["code", "frontend", "backend"],
+    "description": "No-code AI app builder using OpenRouter APIs.",
+    "pricing": "Freemium",
+    "notes": "Vibe coders: Bolt diy (you can use openrouter apis )"
+  },
+  {
+    "name": "Rocket New",
+    "url": "https://rocket.new/",
+    "category": "AI App Builders",
+    "tags": ["apps", "code", "tokens"],
+    "description": "1M free tokens to build up to 5 applications.",
+    "pricing": "Free tier",
+    "notes": "1million tokens for free , for starters, can build max about 5 applications"
+  },
+  {
+    "name": "Cursor AI",
+    "url": "https://cursor.sh/",
+    "category": "AI App Builders",
+    "tags": ["code", "IDE", "AI"],
+    "description": "AI-powered coding editor (reset free access by deleting account).",
+    "pricing": "Free",
+    "notes": "trick is to delete your account , to use it again for free again"
+  },
+  {
+    "name": "Chef (Convex)",
+    "url": "https://chef.convex.dev/",
+    "category": "AI App Builders",
+    "tags": ["fullstack", "backend", "appbuilder"],
+    "description": "AI app builder with built-in database, auth, file uploads, realtime UIs, and workflows.",
+    "pricing": "Freemium",
+    "notes": "builds anything AI. Knows backend. Full-stack apps with DB, auth, uploads, real-time UIs, workflows."
+  },
+  {
+    "name": "DeepSite Projects",
+    "url": "https://enzostvs-deepsite.hf.space/projects/new",
+    "category": "AI App Builders",
+    "tags": ["basic", "projects", "webdev"],
+    "description": "Can build basic web development projects with AI.",
+    "pricing": "Free",
+    "notes": "can build basic web dev projects"
+  },
+  {
+    "name": "Same.new",
+    "url": "https://same.new/",
+    "category": "Web Development",
+    "tags": ["clone", "websites", "nocode"],
+    "description": "Clones any website without heavy coding.",
+    "pricing": "Free",
+    "notes": "clones any webiste wothout heavy coding"
+  },
+  {
+    "name": "Spline",
+    "url": "https://spline.design/",
+    "category": "Web Development",
+    "tags": ["3d", "animations", "design"],
+    "description": "Design and animate 3D objects for web projects.",
+    "pricing": "Freemium",
+    "notes": "3d Animations Design  Spline"
+  },
+  {
+    "name": "Unicorn Studio",
+    "url": "https://unicorn.studio/",
+    "category": "Web Development",
+    "tags": ["webgl", "design", "animations"],
+    "description": "WebGL-based animation and design platform.",
+    "pricing": "Freemium",
+    "notes": "WebGL Animations Design  Unicorn Studio"
+  },
+  {
+    "name": "Phase",
+    "url": "https://phase.dev/",
+    "category": "Web Development",
+    "tags": ["2d", "animations", "design"],
+    "description": "2D animation design tool for web projects.",
+    "pricing": "Freemium",
+    "notes": "2d Animations Design  Phase"
+  },
+  {
+    "name": "Origami Studio",
+    "url": "https://origami.design/",
+    "category": "Web Development",
+    "tags": ["prototyping", "advanced", "design"],
+    "description": "Advanced prototyping tool for interactive designs.",
+    "pricing": "Free",
+    "notes": "Advanced Prototyping  origami studio"
+  },
+  {
+    "name": "Lottie Labs",
+    "url": "https://lottiefiles.com/",
+    "category": "Web Development",
+    "tags": ["microinteractions", "animations", "design"],
+    "description": "Create and use micro-interactions with Lottie animations.",
+    "pricing": "Freemium",
+    "notes": "Micro Interactions Design  Lottie Labs"
+  },
+  {
+    "name": "Awwwards",
+    "url": "https://www.awwwards.com/",
+    "category": "Web Development",
+    "tags": ["inspiration", "websites", "design"],
+    "description": "Inspiration for modern website designs with animations.",
+    "pricing": "Free",
+    "notes": "Websites Animation Inspiration  Awwwards"
+  },
+  {
+    "name": "60fps.design",
+    "url": "https://60fps.design/",
+    "category": "Web Development",
+    "tags": ["app", "animations", "inspiration"],
+    "description": "App animation inspiration platform.",
+    "pricing": "Free",
+    "notes": "App animations Inspiration  60fps.design"
+  },
+  {
+    "name": "ReactBits",
+    "url": "https://reactbits.dev/",
+    "category": "Web Development",
+    "tags": ["react", "snippets", "components"],
+    "description": "Collection of reusable React code snippets and components.",
+    "pricing": "Free",
+    "notes": "reactbits.dev"
+  },
+  {
+    "name": "21st.dev",
+    "url": "https://21st.dev/",
+    "category": "Web Development",
+    "tags": ["webdev", "resources", "ai"],
+    "description": "Developer resources for modern web projects.",
+    "pricing": "Free",
+    "notes": "21stdev"
+  },
+  {
+    "name": "Anime.js",
+    "url": "https://animejs.com/",
+    "category": "Web Development",
+    "tags": ["animations", "javascript", "library"],
+    "description": "Lightweight JavaScript animation library.",
+    "pricing": "Free",
+    "notes": "anime.js"
+  },
+  {
+    "name": "CSS Grid Generator",
+    "url": "https://cssgrid-generator.netlify.app/",
+    "category": "Web Development",
+    "tags": ["css", "grid", "design"],
+    "description": "Visual tool for generating CSS grid layouts.",
+    "pricing": "Free",
+    "notes": "🔗cssgridgenerator.io"
+  },
+  {
+    "name": "Vercel",
+    "url": "https://vercel.com/",
+    "category": "Hosting",
+    "tags": ["hosting", "deploy", "frontend"],
+    "description": "Free hosting and deployment platform for web apps.",
+    "pricing": "Free tier",
+    "notes": "FREE hosting Vercel"
+  },
+  {
+    "name": "GitHub Pages",
+    "url": "https://pages.github.com/",
+    "category": "Hosting",
+    "tags": ["hosting", "static", "deploy"],
+    "description": "Free static site hosting directly from GitHub repositories.",
+    "pricing": "Free",
+    "notes": "FREE hosting GitHub pages"
+  },
+  {
+    "name": "Netlify",
+    "url": "https://www.netlify.com/",
+    "category": "Hosting",
+    "tags": ["hosting", "deploy", "serverless"],
+    "description": "Hosting platform for static sites and serverless functions.",
+    "pricing": "Free tier",
+    "notes": "FREE hosting Netlify"
+  },
+  {
+    "name": "Render",
+    "url": "https://render.com/",
+    "category": "Hosting",
+    "tags": ["hosting", "apps", "server"],
+    "description": "Cloud hosting for apps, databases, and web services.",
+    "pricing": "Free tier",
+    "notes": "FREE hosting Render"
+  },
+  {
+    "name": "Railway",
+    "url": "https://railway.app/",
+    "category": "Hosting",
+    "tags": ["hosting", "deploy", "database"],
+    "description": "Deployment platform with free tier for apps and databases.",
+    "pricing": "Free tier",
+    "notes": "FREE hosting Railway"
+  },
+  {
+    "name": "Google AI Studio",
+    "url": "https://aistudio.google.com/apikey",
+    "category": "APIs",
+    "tags": ["api", "keys", "google"],
+    "description": "Generate free API keys for Google AI services.",
+    "pricing": "Free",
+    "notes": "FREE API KEYS"
+  },
+  {
+    "name": "OpenRouter AI",
+    "url": "https://openrouter.ai/models?q=free%20",
+    "category": "APIs",
+    "tags": ["api", "ai", "models"],
+    "description": "Access free and paid AI models via OpenRouter.",
+    "pricing": "Freemium",
+    "notes": "FREE API KEYS"
+  },
+  {
+    "name": "Groq AI",
+    "url": "https://console.groq.com/keys",
+    "category": "APIs",
+    "tags": ["api", "ai", "models"],
+    "description": "Fast AI inference APIs with free key options.",
+    "pricing": "Free",
+    "notes": "FREE API KEYS"
+  },
+  {
+    "name": "API Vault",
+    "url": "https://apivault.dev/",
+    "category": "APIs",
+    "tags": ["api", "public", "free"],
+    "description": "Collection of free public APIs for ML and DL projects.",
+    "pricing": "Free",
+    "notes": "public apis for free can be used for ml and dl"
+  },
+  {
+    "name": "Code2Tutorial",
+    "url": "https://code2tutorial.com/",
+    "category": "Learning",
+    "tags": ["tutorials", "github", "education"],
+    "description": "Turn any GitHub repo into an interactive tutorial instantly.",
+    "pricing": "Free",
+    "notes": "You can instantly turn any GitHub repository into a clean, interactive tutorial."
+  },
+  {
+    "name": "Pinokio",
+    "url": "https://pinokio.com/",
+    "category": "AI Automation",
+    "tags": ["local", "automation", "apps"],
+    "description": "Browser to locally install, run, and automate AI apps.",
+    "pricing": "Free",
+    "notes": "lets you install, run, and automate AI locally with scripts and UI."
+  },
+  {
+    "name": "MeetBlue",
+    "url": "https://meetblue.ai/#pricing",
+    "category": "Learning",
+    "tags": ["study", "notes", "ai"],
+    "description": "AI study assistant tool (summaries, help).",
+    "pricing": "Freemium",
+    "notes": "will be useful for studying ig"
+  },
+  {
+    "name": "AiDocMaker",
+    "url": "https://www.aidocmaker.com/",
+    "category": "Productivity",
+    "tags": ["documents", "pdf", "writer"],
+    "description": "AI tool for creating documents quickly.",
+    "pricing": "Freemium",
+    "notes": "for creating document"
+  },
+  {
+    "name": "Vizard AI",
+    "url": "https://vizard.ai/?via=powerai",
+    "category": "Generative Media",
+    "tags": ["video", "clips", "editing"],
+    "description": "AI tool for creating and editing videos easily.",
+    "pricing": "Freemium",
+    "notes": "idk what categroy this comes under"
+  },
+  {
+    "name": "Meta AI",
+    "url": "https://www.meta.ai/",
+    "category": "AI Assistants",
+    "tags": ["assistant", "chatbot", "meta"],
+    "description": "Meta’s conversational AI assistant.",
+    "pricing": "Free",
+    "notes": "comes under some category"
+  },
+  {
+    "name": "Ollama Library",
+    "url": "https://ollama.com/library",
+    "category": "AI Automation",
+    "tags": ["llms", "local", "models"],
+    "description": "Run large language models locally on your machine.",
+    "pricing": "Free",
+    "notes": "for running llms locally"
+  },
+  {
+    "name": "TV Garden",
+    "url": "https://tv.garden/",
+    "category": "Generative Media",
+    "tags": ["video", "ai", "media"],
+    "description": "AI-generated media and creative video platform.",
+    "pricing": "Freemium",
+    "notes": "put this also in some category"
+  },
+  {
+    "name": "ToolFK",
+    "url": "https://www.toolfk.com/",
+    "category": "Utilities",
+    "tags": ["tools", "ai", "directory"],
+    "description": "Collection of AI-powered tools in one place.",
+    "pricing": "Free",
+    "notes": "add this under some genre"
+  },
+  {
+    "name": "HeyGen",
+    "url": "https://www.heygen.com/",
+    "category": "Generative Media",
+    "tags": ["video", "avatar", "ai"],
+    "description": "AI-powered video avatars for creators and businesses.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io/",
+    "category": "Generative Media",
+    "tags": ["voice", "audio", "ai"],
+    "description": "AI-powered voice synthesis and cloning.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "Suno AI",
+    "url": "https://suno.com/",
+    "category": "Generative Media",
+    "tags": ["music", "audio", "ai"],
+    "description": "AI platform for generating music tracks.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google/",
+    "category": "Productivity",
+    "tags": ["notes", "knowledge", "google"],
+    "description": "Google’s AI-powered research and knowledge notebook.",
+    "pricing": "Free",
+    "notes": ""
+  },
+  {
+    "name": "Claude",
+    "url": "https://claude.ai/",
+    "category": "AI Assistants",
+    "tags": ["assistant", "chatbot", "anthropic"],
+    "description": "AI assistant by Anthropic for reasoning and writing.",
+    "pricing": "Free + Paid",
+    "notes": ""
+  },
+  {
+    "name": "Omi",
+    "url": "https://www.omi.me/",
+    "category": "AI Assistants",
+    "tags": ["personal", "assistant", "ai"],
+    "description": "AI companion and personal assistant.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "Instantly",
+    "url": "https://instantly.ai/",
+    "category": "Productivity",
+    "tags": ["emails", "automation", "marketing"],
+    "description": "AI tool for automating outreach and emails.",
+    "pricing": "Paid",
+    "notes": ""
+  },
+  {
+    "name": "Apollo",
+    "url": "https://www.apollo.io/",
+    "category": "Productivity",
+    "tags": ["sales", "crm", "automation"],
+    "description": "AI-powered sales engagement and CRM tool.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "Flux AI",
+    "url": "https://flux-ai.io/",
+    "category": "Generative Media",
+    "tags": ["image", "video", "ai"],
+    "description": "AI tool for generating images and creative media.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "Perplexity AI",
+    "url": "https://www.perplexity.ai/",
+    "category": "AI Assistants",
+    "tags": ["search", "assistant", "knowledge"],
+    "description": "AI search engine and knowledge assistant.",
+    "pricing": "Free + Paid",
+    "notes": ""
+  },
+  {
+    "name": "Canva AI",
+    "url": "https://aurelius.link/canva",
+    "category": "Generative Media",
+    "tags": ["design", "graphics", "ai"],
+    "description": "AI-powered creative tools inside Canva.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "YouTube DreamScreen",
+    "url": "https://youtube.com/",
+    "category": "Generative Media",
+    "tags": ["youtube", "video", "backgrounds"],
+    "description": "AI-generated video backgrounds inside YouTube app.",
+    "pricing": "Free",
+    "notes": "Access via YouTube mobile app"
+  },
+  {
+    "name": "Gemini Live",
+    "url": "https://gemini.google/overview/gemini",
+    "category": "AI Assistants",
+    "tags": ["google", "assistant", "ai"],
+    "description": "Google’s conversational AI with live interaction.",
+    "pricing": "Free + Paid",
+    "notes": ""
+  },
+  {
+    "name": "RightClickPrompt",
+    "url": "https://aurelius.link/rightclickprompt",
+    "category": "Utilities",
+    "tags": ["prompts", "ai", "tools"],
+    "description": "Browser extension to generate prompts with right-click.",
+    "pricing": "Free",
+    "notes": ""
+  },
+  {
+    "name": "URL to Any",
+    "url": "https://aurelius.link/urltoany",
+    "category": "Utilities",
+    "tags": ["url", "convert", "ai"],
+    "description": "Turn any URL into AI-friendly format.",
+    "pricing": "Free",
+    "notes": ""
+  },
+  {
+    "name": "Google Stitch",
+    "url": "https://stitch.withgoogle.com/",
+    "category": "Productivity",
+    "tags": ["google", "collaboration", "ai"],
+    "description": "Google’s AI-powered collaboration and workflow tool.",
+    "pricing": "Free",
+    "notes": ""
+  },
+  {
+    "name": "Chronicle",
+    "url": "https://aurelius.link/chronicle",
+    "category": "Productivity",
+    "tags": ["ai", "storytelling", "docs"],
+    "description": "AI tool for creating narratives, documents, or content.",
+    "pricing": "Freemium",
+    "notes": ""
+  },
+  {
+    "name": "Chat for Data",
+    "url": "https://aurelius.link/chat4data",
+    "category": "Data & AI",
+    "tags": ["data", "analysis", "chat"],
+    "description": "Chat interface for working with and analyzing data.",
+    "pricing": "Freemium",
+    "notes": ""
+  }
+]
