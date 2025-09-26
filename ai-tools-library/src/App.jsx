@@ -78,10 +78,21 @@ const LibraryPage = () => {
     }
     
     if (searchTerm) {
-      filtered = filtered.filter(tool => 
-        tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tool.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      const searchLower = searchTerm.toLowerCase();
+      console.log('Searching for:', searchTerm, 'in', tools.length, 'tools');
+      filtered = filtered.filter(tool => {
+        const matches = tool.name.toLowerCase().includes(searchLower) ||
+          tool.description.toLowerCase().includes(searchLower) ||
+          tool.category.toLowerCase().includes(searchLower) ||
+          (tool.tags && Array.isArray(tool.tags) && tool.tags.some(tag => 
+            tag.toLowerCase().includes(searchLower)
+          ));
+        if (matches) {
+          console.log('Found match:', tool.name);
+        }
+        return matches;
+      });
+      console.log('Search results:', filtered.length, 'tools found');
     }
     
     setFilteredTools(filtered);
@@ -120,7 +131,11 @@ const LibraryPage = () => {
         tags: '', pricing: '', notes: ''
       });
       setShowForm(false);
-      await fetchTools();
+      
+      // Small delay to ensure database is updated
+      setTimeout(async () => {
+        await fetchTools();
+      }, 100);
     } catch (err) {
       console.error('Error adding tool:', err);
       setError(err.message);
@@ -289,7 +304,7 @@ const LibraryPage = () => {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                 <input 
                   type="text" 
-                  placeholder="Search tools by name or description..." 
+                  placeholder="Search tools by name, description, category, or tags..." 
                   value={searchTerm} 
                   onChange={(e) => setSearchTerm(e.target.value)} 
                   className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
