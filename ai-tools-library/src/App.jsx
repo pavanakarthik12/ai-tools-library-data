@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import { Search, Filter, Grid, Plus, ExternalLink } from 'lucide-react';
+import { Search, Filter, Grid, Plus, ExternalLink, X } from 'lucide-react';
 import HeroSection from './components/HeroSection';
 import ToolCard from './components/ToolCard';
 import TagsTest from './components/TagsTest';
@@ -136,20 +136,35 @@ const LibraryPage = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
-        {/* Overhead lighting effect */}
+        {/* Expanded Overhead lighting effect for loading */}
         <div className="absolute inset-0">
+          {/* Primary massive light source */}
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              background: 'radial-gradient(ellipse 120% 80% at center top, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 40%, rgba(156,163,175,0.05) 70%, transparent 100%)'
+              background: 'radial-gradient(ellipse 200% 150% at center top, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 15%, rgba(255,255,255,0.2) 30%, rgba(229,231,235,0.12) 45%, rgba(156,163,175,0.06) 65%, rgba(75,85,99,0.03) 85%, transparent 100%)'
+            }}
+          ></div>
+          
+          {/* Ultra-wide core bright spot */}
+          <div 
+            className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-none h-screen blur-3xl"
+            style={{
+              background: 'radial-gradient(ellipse 2000px 600px at center top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.4) 30%, rgba(229,231,235,0.2) 50%, rgba(156,163,175,0.1) 70%, transparent 90%)',
+              width: '200vw',
+              left: '-50vw'
             }}
           ></div>
         </div>
-        {/* Floating particles */}
+        
+        {/* Extended floating particles */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-1 h-1 bg-gray-400 rounded-full opacity-20" style={{ animation: 'float 5s ease-in-out infinite' }}></div>
           <div className="absolute top-40 right-32 w-1 h-1 bg-white rounded-full opacity-25" style={{ animation: 'float 6s ease-in-out infinite delay-1s' }}></div>
+          <div className="absolute top-60 left-5 w-1 h-1 bg-gray-300 rounded-full opacity-15" style={{ animation: 'float 7s ease-in-out infinite delay-2s' }}></div>
+          <div className="absolute bottom-40 right-8 w-1 h-1 bg-gray-200 rounded-full opacity-20" style={{ animation: 'float 8s ease-in-out infinite delay-0.5s' }}></div>
         </div>
+        
         <div className="text-center relative z-10">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4 opacity-60"></div>
           <p className="text-xl text-gray-200">Loading AI Tools...</p>
@@ -169,15 +184,25 @@ const LibraryPage = () => {
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
-        {/* Overhead lighting effect */}
+        {/* Expanded Overhead lighting effect for error */}
         <div className="absolute inset-0">
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              background: 'radial-gradient(ellipse 120% 80% at center top, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 40%, rgba(156,163,175,0.05) 70%, transparent 100%)'
+              background: 'radial-gradient(ellipse 200% 150% at center top, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 15%, rgba(255,255,255,0.2) 30%, rgba(229,231,235,0.12) 45%, rgba(156,163,175,0.06) 65%, rgba(75,85,99,0.03) 85%, transparent 100%)'
+            }}
+          ></div>
+          
+          <div 
+            className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-none h-screen blur-3xl"
+            style={{
+              background: 'radial-gradient(ellipse 2000px 600px at center top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.4) 30%, rgba(229,231,235,0.2) 50%, rgba(156,163,175,0.1) 70%, transparent 90%)',
+              width: '200vw',
+              left: '-50vw'
             }}
           ></div>
         </div>
+        
         <div className="text-center max-w-md mx-auto p-8 relative z-10">
           <div className="bg-gray-800 bg-opacity-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
             <svg className="w-10 h-10 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,18 +220,62 @@ const LibraryPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Overhead lighting effect for entire page */}
+    <div className="min-h-screen bg-black text-white">
+      {/* Expanded overhead lighting effect for entire page */}
       <div className="absolute inset-0 fixed">
+        {/* Primary massive light source */}
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
-            background: 'radial-gradient(ellipse 120% 80% at center top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 30%, rgba(229,231,235,0.08) 50%, rgba(156,163,175,0.04) 70%, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0.6) 100%)'
+            background: 'radial-gradient(ellipse 200% 150% at center top, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 15%, rgba(255,255,255,0.2) 30%, rgba(229,231,235,0.12) 45%, rgba(156,163,175,0.06) 65%, rgba(75,85,99,0.03) 85%, transparent 100%)'
+          }}
+        ></div>
+        
+        {/* Secondary expansive ambient layer */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            background: 'radial-gradient(ellipse 180% 120% at center 15%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.25) 25%, rgba(229,231,235,0.15) 40%, rgba(156,163,175,0.08) 60%, rgba(75,85,99,0.04) 80%, transparent 95%)'
+          }}
+        ></div>
+        
+        {/* Ultra-wide core bright spot */}
+        <div 
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-none h-screen blur-3xl"
+          style={{
+            background: 'radial-gradient(ellipse 2000px 600px at center top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.4) 30%, rgba(229,231,235,0.2) 50%, rgba(156,163,175,0.1) 70%, transparent 90%)',
+            width: '200vw',
+            left: '-50vw'
+          }}
+        ></div>
+        
+        {/* Extended side lighting */}
+        <div 
+          className="absolute top-1/4 left-0 w-96 h-96 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 40%, transparent 70%)',
+            transform: 'translateX(-50%)'
+          }}
+        ></div>
+        
+        <div 
+          className="absolute top-1/4 right-0 w-96 h-96 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 40%, transparent 70%)',
+            transform: 'translateX(50%)'
+          }}
+        ></div>
+        
+        {/* Softer, wider vignette */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse 140% 120% at center center, transparent 0%, transparent 60%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.15) 90%, rgba(0,0,0,0.4) 100%)'
           }}
         ></div>
       </div>
 
-      {/* Floating light particles */}
+      {/* Enhanced floating light particles with wider distribution */}
       <div className="absolute inset-0 fixed">
         <div className="absolute top-20 left-20 w-1 h-1 bg-gray-400 rounded-full opacity-20" style={{ animation: 'float 5s ease-in-out infinite' }}></div>
         <div className="absolute top-40 right-32 w-1 h-1 bg-white rounded-full opacity-25" style={{ animation: 'float 6s ease-in-out infinite delay-1s' }}></div>
@@ -214,36 +283,45 @@ const LibraryPage = () => {
         <div className="absolute bottom-60 right-20 w-1 h-1 bg-gray-200 rounded-full opacity-20" style={{ animation: 'float 8s ease-in-out infinite delay-0.5s' }}></div>
         <div className="absolute top-60 left-1/2 w-1 h-1 bg-white rounded-full opacity-30" style={{ animation: 'float 6.5s ease-in-out infinite delay-1.5s' }}></div>
         <div className="absolute bottom-80 right-40 w-1 h-1 bg-gray-400 rounded-full opacity-18" style={{ animation: 'float 9s ease-in-out infinite delay-0.8s' }}></div>
+        <div className="absolute top-32 left-5 w-1 h-1 bg-gray-300 rounded-full opacity-22" style={{ animation: 'float 11s ease-in-out infinite delay-2.2s' }}></div>
+        <div className="absolute bottom-32 right-8 w-1 h-1 bg-white rounded-full opacity-25" style={{ animation: 'float 13s ease-in-out infinite delay-1.8s' }}></div>
+        <div className="absolute top-80 left-8 w-1 h-1 bg-gray-400 rounded-full opacity-20" style={{ animation: 'float 10s ease-in-out infinite delay-3s' }}></div>
+        <div className="absolute bottom-20 right-85 w-1 h-1 bg-gray-200 rounded-full opacity-18" style={{ animation: 'float 12s ease-in-out infinite delay-2.5s' }}></div>
       </div>
 
+      <div id="search-section" className="max-w-6xl mx-auto px-6 py-12 relative z-10">
+        
+        {/* Header Section */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold text-white mb-3">AI Tools Library</h1>
+          <p className="text-gray-300 text-lg">Discover and share the best AI tools for your projects</p>
+        </div>
 
-      
-      <div id="search-section" className="container mx-auto px-4 py-12 relative z-10">
         {/* Add Tool Button */}
-        <div className="max-w-4xl mx-auto mb-8">
+        <div className="mb-8">
           <button
             onClick={() => setShowForm(!showForm)}
-            className="bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors flex items-center gap-2 font-semibold"
+            className="bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors flex items-center gap-2 font-medium"
           >
-            <Plus className="h-5 w-5" />
+            {showForm ? <X className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
             {showForm ? 'Cancel' : 'Add New Tool'}
           </button>
         </div>
 
         {/* Add Tool Form */}
         {showForm && (
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg shadow-xl p-6 border border-gray-800">
-              <h3 className="text-xl font-bold mb-4 text-white">Add New Tool</h3>
-              <form onSubmit={handleAddTool} className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="mb-12">
+            <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-xl p-8 border border-gray-800">
+              <h3 className="text-xl font-bold mb-6 text-white">Add New Tool</h3>
+              <form onSubmit={handleAddTool} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-gray-200">Name *</label>
+                    <label className="block text-sm font-medium mb-2 text-gray-200">Tool Name *</label>
                     <input
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                       required
                     />
                   </div>
@@ -253,7 +331,7 @@ const LibraryPage = () => {
                       type="text"
                       value={formData.category}
                       onChange={(e) => setFormData({...formData, category: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                       required
                     />
                   </div>
@@ -263,31 +341,32 @@ const LibraryPage = () => {
                   <textarea
                     value={formData.description}
                     onChange={(e) => setFormData({...formData, description: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent resize-none"
                     rows="3"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-200">Link *</label>
+                  <label className="block text-sm font-medium mb-2 text-gray-200">Website URL *</label>
                   <input
                     type="url"
                     value={formData.link}
                     onChange={(e) => setFormData({...formData, link: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                     required
                   />
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-gray-200">Tags (comma-separated)</label>
+                    <label className="block text-sm font-medium mb-2 text-gray-200">Tags</label>
                     <input
                       type="text"
                       value={formData.tags}
                       onChange={(e) => setFormData({...formData, tags: e.target.value})}
-                      placeholder="e.g., AI, productivity, free"
-                      className="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400"
+                      placeholder="AI, productivity, free"
+                      className="w-full px-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400"
                     />
+                    <p className="text-xs text-gray-400 mt-1">Separate tags with commas</p>
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2 text-gray-200">Pricing</label>
@@ -295,32 +374,32 @@ const LibraryPage = () => {
                       type="text"
                       value={formData.pricing}
                       onChange={(e) => setFormData({...formData, pricing: e.target.value})}
-                      placeholder="e.g., Free, Paid, Freemium"
-                      className="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400"
+                      placeholder="Free, Paid, Freemium"
+                      className="w-full px-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-200">Notes</label>
+                  <label className="block text-sm font-medium mb-2 text-gray-200">Additional Notes</label>
                   <textarea
                     value={formData.notes}
                     onChange={(e) => setFormData({...formData, notes: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400"
+                    className="w-full px-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent resize-none placeholder-gray-400"
                     rows="2"
-                    placeholder="Additional notes or comments"
+                    placeholder="Any additional information about this tool"
                   />
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 pt-4">
                   <button
                     type="submit"
-                    className="bg-white text-black px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors font-semibold"
+                    className="bg-white text-black px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
                   >
                     Add Tool
                   </button>
                   <button
                     type="button"
                     onClick={() => setShowForm(false)}
-                    className="bg-gray-700 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                    className="bg-gray-700 text-white px-8 py-3 rounded-lg hover:bg-gray-600 transition-colors font-medium"
                   >
                     Cancel
                   </button>
@@ -331,14 +410,14 @@ const LibraryPage = () => {
         )}
 
         {/* Search and Filter */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg shadow-xl p-6 border border-gray-800">
+        <div className="mb-8">
+          <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-xl p-6 border border-gray-800 shadow-xl">
             <div className="flex flex-col lg:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                 <input 
                   type="text" 
-                  placeholder="Search tools by name, description, category, or tags..." 
+                  placeholder="Search by name, description, category, or tags..." 
                   value={searchTerm} 
                   onChange={(e) => setSearchTerm(e.target.value)} 
                   className="w-full pl-12 pr-4 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400" 
@@ -349,7 +428,7 @@ const LibraryPage = () => {
                 <select 
                   value={selectedCategory} 
                   onChange={(e) => setSelectedCategory(e.target.value)} 
-                  className="pl-10 pr-8 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent min-w-[160px]"
+                  className="pl-10 pr-8 py-3 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent min-w-[180px]"
                 >
                   {categories.map(category => (
                     <option key={category} value={category} className="bg-gray-800">{category}</option>
@@ -360,10 +439,10 @@ const LibraryPage = () => {
           </div>
         </div>
 
-        {/* Results */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg shadow-xl p-6 border border-gray-800">
-            <h2 className="text-2xl font-bold text-white mb-2">
+        {/* Results Summary */}
+        <div className="mb-8">
+          <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-xl p-6 border border-gray-800 shadow-xl">
+            <h2 className="text-xl font-bold text-white mb-1">
               {filteredTools.length} {filteredTools.length === 1 ? 'Tool' : 'Tools'} Found
             </h2>
             <p className="text-gray-300">
@@ -373,12 +452,12 @@ const LibraryPage = () => {
           </div>
         </div>
 
-        {/* Tools List */}
+        {/* Tools Grid */}
         {filteredTools.length === 0 ? (
           <div className="text-center py-16">
-            <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg shadow-xl p-12 max-w-md mx-auto border border-gray-800">
+            <div className="bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-xl p-12 max-w-md mx-auto border border-gray-800 shadow-xl">
               <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">No Tools Found</h3>
+              <h3 className="text-xl font-bold text-white mb-3">No Tools Found</h3>
               <p className="text-gray-300 mb-6">Try adjusting your search or filters.</p>
               <button 
                 onClick={() => { setSearchTerm(''); setSelectedCategory('All'); }} 
@@ -391,11 +470,18 @@ const LibraryPage = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredTools.map((tool) => (
-              <div key={tool.id} className="relative bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-lg shadow-xl p-6 hover:shadow-2xl hover:bg-opacity-90 transition-all border border-gray-800">
+              <div key={tool.id} className="relative bg-gray-900 bg-opacity-80 backdrop-blur-sm rounded-xl p-6 hover:shadow-2xl hover:bg-opacity-90 transition-all border border-gray-800 shadow-xl group">
                 
-                <h3 className="text-xl font-bold text-white mb-2">{tool.name}</h3>
-                <p className="text-gray-300 text-sm mb-2">{tool.category}</p>
-                <p className="text-gray-400 mb-4 line-clamp-3">{tool.description}</p>
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {tool.name}
+                  </h3>
+                  <p className="text-gray-300 text-sm">{tool.category}</p>
+                </div>
+                
+                <p className="text-gray-400 mb-4 line-clamp-3">
+                  {tool.description}
+                </p>
                 
                 {tool.tags && Array.isArray(tool.tags) && tool.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
