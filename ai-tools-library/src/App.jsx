@@ -7,21 +7,7 @@ import TagsTest from './components/TagsTest';
 import { supabase } from './supabaseClient';
 import './App.css';
 
-// Splash page component for HeroSection with redirect
-const HeroSplash = () => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate('/library');
-    }, 3000); // 3 seconds
-    return () => clearTimeout(timer);
-  }, [navigate]);
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
-      <HeroSection />
-    </div>
-  );
-};
+
 
 const LibraryPage = () => {
   const [tools, setTools] = useState([]);
@@ -406,7 +392,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HeroSplash />} />
+        <Route path="/" element={<HeroSection />} />
         <Route path="/library" element={<LibraryPage />} />
         <Route path="/tags-test" element={<TagsTest />} />
       </Routes>

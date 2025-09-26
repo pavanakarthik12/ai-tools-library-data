@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Mail, Linkedin, Users, Heart, Code, Lightbulb } from 'lucide-react';
 
-const HeroSection = ({ onStartExploring }) => {
+const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleStartExploring = () => {
+    navigate('/library');
+  };
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Expanded Overhead Light Effect - Lighter and Full Page Coverage */}
@@ -86,7 +93,7 @@ const HeroSection = ({ onStartExploring }) => {
 
         {/* CTA Button */}
         <button
-          onClick={onStartExploring}
+          onClick={handleStartExploring}
           className="group relative bg-white text-black px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/25 mb-16"
         >
           <span className="relative z-10 flex items-center gap-2">
