@@ -78,7 +78,7 @@ const ToolCard = ({ tool }) => {
           </div>
           
           <a
-            href={tool.url}
+            href={tool.link || tool.url}
             target="_blank"
             rel="noopener noreferrer"
             className="group/button inline-flex items-center gap-2 bg-gradient-to-r from-gray-800 to-gray-700 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300 text-sm font-semibold shadow-lg hover:shadow-xl"
