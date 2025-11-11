@@ -1,13 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Search, Filter, Plus, ExternalLink, X, Moon, Sun, ChevronDown, Info, AlertCircle, Sparkles } from 'lucide-react';
+import { Search, Filter, Plus, ExternalLink, X, Moon, Sun, ChevronDown, Info, AlertCircle, Sparkles, LogOut } from 'lucide-react';
 import HeroSection from './components/HeroSection';
 import ToolCard from './components/ToolCard';
 import TagsTest from './components/TagsTest';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import { supabase } from './supabaseClient';
+import { auth } from './firebaseClient';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import './App.css';
 
-const LibraryPage = () => {
+const LibraryPage = ({ user, onLogout }) => {
   const [tools, setTools] = useState([]);
   const [filteredTools, setFilteredTools] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -441,6 +445,18 @@ const LibraryPage = () => {
   return (
     <div className={`min-h-screen ${themeClasses.background} ${themeClasses.text} transition-colors duration-300`}>
       {getLightingEffect()}
+
+      {/* Logout Button */}
+      <div className="absolute top-4 right-4 z-20">
+        <button
+          onClick={onLogout}
+          className={`${themeClasses.cardBg} ${themeClasses.cardBorder} border p-2 rounded-lg transition-all shadow-sm flex items-center gap-2`}
+          aria-label="Logout"
+        >
+          <LogOut className="h-5 w-5" />
+          <span className="hidden sm:inline">Logout</span>
+        </button>
+      </div>
 
       <div id="search-section" className="relative max-w-7xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
@@ -990,11 +1006,31 @@ const LibraryPage = () => {
 };
 
 function App() {
+  const [user, setUser] = useState(null);
+  
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+    
+    return () => unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HeroSection />} />
-        <Route path="/library" element={<LibraryPage />} />
+        <Route path="/library" element={user ? <LibraryPage user={user} onLogout={handleLogout} /> : <Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/tags-test" element={<TagsTest />} />
       </Routes>
     </Router>
